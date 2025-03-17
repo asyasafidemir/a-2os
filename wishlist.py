@@ -17,3 +17,12 @@ def listeyi_goster():
 # Test için fonksiyonu çalıştır
 listeyi_goster()
 
+def istek_ekle():
+    """Kullanıcıdan yeni bir istek alıp listeye ekler."""
+    yeni_istek = input("Eklemek istediğiniz istek: ")
+       with open(WISHLIST_FILE, "a", encoding="utf-8") as file:
+        file.write(yeni_istek + "\n")
+        print(f"'{yeni_istek}' istek listesine eklendi.")
+
+# Test için fonksiyonu çalıştır (isteğe bağlı)
+# istek_ekle()
