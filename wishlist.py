@@ -24,5 +24,26 @@ def istek_ekle():
         file.write(yeni_istek + "\n")
         print(f"'{yeni_istek}' istek listesine eklendi.")
 
+ def istek_sil():
+    """Kullanıcının belirttiği numaradaki isteği siler."""
+    listeyi_goster()  # Önce listeyi gösterelim
+    try:
+        silinecek = int(input("Silmek istediğiniz isteğin numarasını girin: ")) - 1
+        with open(WISHLIST_FILE, "r", encoding="utf-8") as file:
+            wishlist = file.readlines()
+
+        if 0 <= silinecek < len(wishlist):
+            silinen_istek = wishlist.pop(silinecek)
+            with open(WISHLIST_FILE, "w", encoding="utf-8") as file:
+                file.writelines(wishlist)
+            print(f"🗑 '{silinen_istek.strip()}' istek listesinden silindi.")
+        else:
+            print("Geçersiz numara!")
+    except (ValueError, FileNotFoundError):
+        print("Hatalı giriş veya boş liste.")
+
+# Test için fonksiyonu çalıştırabilirsin:
+# istek_sil()       
+
 # Test için fonksiyonu çalıştır (isteğe bağlı)
 # istek_ekle()
