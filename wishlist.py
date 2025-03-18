@@ -17,6 +17,7 @@ def listeyi_goster():
 # Test için fonksiyonu çalıştır
 listeyi_goster()
 
+
 def istek_ekle():
     """Kullanıcıdan yeni bir istek alıp listeye ekler."""
     yeni_istek = input("Eklemek istediğiniz istek: ")
