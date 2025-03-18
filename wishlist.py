@@ -48,3 +48,25 @@ def istek_sil():
 
 # Test için fonksiyonu çalıştır (isteğe bağlı)
 # istek_ekle()
+
+# Ana menü
+while True:
+    print("\n🎯 Wishlist Uygulaması")
+    print("1. Listeyi Göster")
+    print("2. Yeni İstek Ekle")
+    print("3. İstek Sil")
+    print("4. Çıkış")
+
+    secim = input("Seçiminizi yapın: ")
+    
+    if secim == "1":
+        listeyi_goster()
+    elif secim == "2":
+        istek_ekle()
+    elif secim == "3":
+        istek_sil()
+    elif secim == "4":
+        print("Çıkılıyor...")
+        break
+    else:
+        print("Geçersiz seçim, tekrar deneyin!")
