@@ -17,6 +17,7 @@ def listeyi_goster():
 # Test için fonksiyonu çalıştır
 listeyi_goster()
 
+
 def istek_ekle():
     """Kullanıcıdan yeni bir istek alıp listeye ekler."""
     yeni_istek = input("Eklemek istediğiniz istek: ")
@@ -24,7 +25,7 @@ def istek_ekle():
         file.write(yeni_istek + "\n")
         print(f"'{yeni_istek}' istek listesine eklendi.")
 
- def istek_sil():
+def istek_sil():
     """Kullanıcının belirttiği numaradaki isteği siler."""
     listeyi_goster()  # Önce listeyi gösterelim
     try:
