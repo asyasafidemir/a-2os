@@ -24,7 +24,7 @@ def istek_ekle():
         file.write(yeni_istek + "\n")
         print(f"'{yeni_istek}' istek listesine eklendi.")
 
- def istek_sil():
+def istek_sil():
     """Kullanıcının belirttiği numaradaki isteği siler."""
     listeyi_goster()  # Önce listeyi gösterelim
     try:
